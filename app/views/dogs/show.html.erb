@@ -1,0 +1,12 @@
+<h1>
+  <%= @dog.breed %>
+</h1>
+
+<p>
+  <%= @dog.description %>
+</p>
+
+<ul>
+  <li><%= link_to "Edit this dog", edit_dog_path(@dog) %></li>
+  <li><%= link_to "Delete this dog", dog_path, method: :delete %></li>
+</ul>

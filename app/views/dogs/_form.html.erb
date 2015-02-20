@@ -1,0 +1,7 @@
+<%= form_for @dog do |f| %>
+  Breed:<br>
+  <%= f.text_field :breed %><br><br>
+  Description:<br>
+  <%= f.text_area :description %><br><br>
+  <%= f.submit %>
+<% end %>
