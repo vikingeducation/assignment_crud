@@ -14,8 +14,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(whitelisted_post_params)
     if @post.save
+      flash[:success] = "Post created!"
       redirect_to root_path
     else
+      flash[:error] = "Post not created"
       render :new
     end
   end
