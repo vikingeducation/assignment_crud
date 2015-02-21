@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def create
@@ -23,6 +24,6 @@ class PostsController < ApplicationController
 
 
   def whitelisted_post_params
-
+    params.require(:post).permit(:title, :author_name, :body)
   end
 end
