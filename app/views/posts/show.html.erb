@@ -1,0 +1,11 @@
+<h1>
+  <%= @post.title %>
+</h1>
+<p>Wrriten by <%= @post.author_name %></p>
+
+<p><%= @post.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_post_path(@post) %></li>
+  <li><%= link_to "Delete", post_path, method: :delete %></li>
+</ul>

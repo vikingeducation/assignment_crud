@@ -1,0 +1,9 @@
+<h1>-----INDEX-----</h1>
+<% @posts.each do |post| %>
+  <h1>
+  <%= post.title %>
+  </h1>
+  <p>Wrriten by <%= post.author_name %></p>
+
+  <p><%= post.body %></p>
+<% end %>
