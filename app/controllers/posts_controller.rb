@@ -22,6 +22,32 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(whitelisted_post_params)
+      flash[:success] = "Post updated!"
+      redirect_to root_path
+    else
+      flash[:error] = "Post not updated"
+      render :edit
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:success] = "Post destroyed you jerk"
+      redirect_to root_path
+    else
+      flash[:error] = "Post not destroyed"
+      render :show
+    end
+  end
+
   private
 
 
