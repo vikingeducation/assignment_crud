@@ -1,0 +1,12 @@
+<h1>
+  Schwads Political Rants (as necessary)
+</h1>
+
+<% @posts.each do |post| %>
+  <h2>
+    <%= post.title %>
+  </h2>
+  <p>
+    <%= post.body %>
+  </p>
+<% end %>
