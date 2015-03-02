@@ -1,12 +1,9 @@
 <h1>
   Schwads Political Rants (as necessary)
 </h1>
-
-<% @posts.each do |post| %>
+<%= link_to "Create new post", new_post_path %>
+<% Post.all.each do |post| %>
   <h2>
-    <%= post.title %>
+    <%= link_to post.title, @post %>
   </h2>
-  <p>
-    <%= post.body %>
-  </p>
 <% end %>
