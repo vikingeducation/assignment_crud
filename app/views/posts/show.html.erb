@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+<br />
+<p><%= @post.body %></p>
+<%= link_to "delete", post_path(@post), method: :delete %><br />
+<%= link_to "edit", edit_post_path(@post) %><br />
+<br />
+<%= link_to "< back to list", posts_path %>
