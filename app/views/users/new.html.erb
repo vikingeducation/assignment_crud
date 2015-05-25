@@ -1,0 +1,12 @@
+<h2>Create New User</h2>
+
+<% @user.errors.full_messages.each do |error| %>
+	<li><%= error %></li>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.text_field :first_name, placeholder: "First Name" %><br>
+  <%= f.text_field :last_name, placeholder: "Last Name" %><br>
+  <%= f.text_area :bio, placeholder: "Bio" %><br>
+  <%= f.submit "Create" %>
+<% end %>
