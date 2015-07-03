@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root "notes#new"
-  resources :notes, :only => [:new, :create, :show, :index]
+  resources :notes #, :only => [:new, :create, :show, :index]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
