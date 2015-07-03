@@ -2,7 +2,6 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
-    render :new
   end
 
 
@@ -40,6 +39,11 @@ class NotesController < ApplicationController
       # flash warning
       render :new
     end
+  end
+
+
+  def index
+    @notes = Note.all
   end
 
 

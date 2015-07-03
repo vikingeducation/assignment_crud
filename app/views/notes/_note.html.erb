@@ -1,0 +1,4 @@
+<li>
+  <%= link_to note.body, note_path(note.id) %>
+  <%= link_to "(#{note.category})", "#" unless note.category.empty? %>
+</li>
