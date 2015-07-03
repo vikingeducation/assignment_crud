@@ -5,6 +5,11 @@ class NotesController < ApplicationController
   end
 
 
+  def show
+    @note = Note.find(params[:id])
+  end
+
+
   def new
     @note = Note.new
   end
@@ -14,17 +19,12 @@ class NotesController < ApplicationController
     @note = Note.new(whitelisted_params)
 
     if @note.save
-      # flash success
+      flash[:success] = "Note saved!"
       redirect_to @note
     else
-      # flash warning
+      flash[:warning] = "Save failed! Try again."
       render :new
     end
-  end
-
-
-  def show
-    @note = Note.find(params[:id])
   end
 
 
@@ -37,10 +37,10 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
 
     if @note.update(whitelisted_params)
-      # flash success
+      flash[:success] = "Note updated!"
       redirect_to @note
     else
-      # flash warning
+      flash[:warning] = "Update failed! Try again."
       render :edit
     end
   end
