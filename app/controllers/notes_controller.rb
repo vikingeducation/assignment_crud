@@ -1,5 +1,10 @@
 class NotesController < ApplicationController
 
+  def index
+    @notes = Note.all
+  end
+
+
   def new
     @note = Note.new
   end
@@ -10,7 +15,7 @@ class NotesController < ApplicationController
 
     if @note.save
       # flash success
-      redirect_to note_path(@note.id)
+      redirect_to @note
     else
       # flash warning
       render :new
@@ -25,25 +30,25 @@ class NotesController < ApplicationController
 
   def edit
     @note = Note.find(params[:id])
-    render :new
   end
 
 
   def update
-    @note = Note.new(whitelisted_params)
+    @note = Note.find(params[:id])
 
-    if @note.save
+    if @note.update(whitelisted_params)
       # flash success
-      redirect_to note_path(@note.id)
+      redirect_to @note
     else
       # flash warning
-      render :new
+      render :edit
     end
   end
 
 
-  def index
-    @notes = Note.all
+  def destroy
+    @note = Note.find(params[:id]).destroy!
+    redirect_to notes_path
   end
 
 

@@ -1,0 +1,12 @@
+<h1>Note to Self:</h1>
+
+<%= form_for @note do |n| %>
+  <%= n.text_area :body, size: "60x6" %><br>
+
+  <%= label_tag(:category, "Category:") %>
+  <%= n.text_field :category %><br>
+
+  <%= n.submit "Save Note"%>
+<% end %>
+
+<%= link_to "Delete Note", @note, :method => :delete %>
