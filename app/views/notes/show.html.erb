@@ -1,0 +1,7 @@
+<h1>Note to Self:</h1>
+
+<p><%= @note.body %></p>
+<p>Category: <%= @note.category%></p>
+
+<%= link_to "Edit Note", edit_note_path %>
+<%= link_to "Delete Note", @note, :method => :delete %>
