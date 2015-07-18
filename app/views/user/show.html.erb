@@ -1,0 +1,10 @@
+<h1>
+  User <%= @user.username %>
+</h1>
+
+<h4>Email: </h4>
+<%= @user.email %>
+
+<%= link_to "Return Home", user_index_path %>
+
+<%= link_to "Delete User", user_path(@user), method: :delete %>
