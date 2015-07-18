@@ -8,7 +8,15 @@
 </head>
 <body data-no-turbolink>
 
-<%= yield %>
+  <h3 style="color:green">
+    <%= flash[:success] %>
+  </h3>
+
+  <h3 style="color:red">
+    <%= flash[:error] %>
+  </h3>
+
+  <%= yield %>
 
 </body>
 </html>

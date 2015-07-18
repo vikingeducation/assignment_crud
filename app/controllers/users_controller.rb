@@ -10,8 +10,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params_hash)
-    @user.save
-    redirect_to user_path(@user)
+    if @user.save
+      flash[:success] = "User #{@user.username} successfully created!"
+      redirect_to user_path(@user)
+    else
+      flash[:error] = "User could not be created"
+      redirect_to new_user
+    end
   end
 
   def show
@@ -25,11 +30,15 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(params_hash)
+    flash[:success] = "User #{@user.username} was updated!"
     redirect_to user_path(@user)
   end
 
   def destroy
-
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "User #{@user.username} was successfully deleted"
+    redirect_to users_path
   end
 
   private
