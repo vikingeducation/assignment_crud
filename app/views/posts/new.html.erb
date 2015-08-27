@@ -1,0 +1,12 @@
+<h1>add a new article</h1>
+<%= form_for @post do |p| %>
+  <h2>
+    <%= p.label :title %><br/>
+    <%= p.text_field :title%>
+  </h2>
+  <p>
+    <%= p.label :content %><br/>
+    <%= p.text_area :content %>
+  </p>
+  <%= p.submit "add"%><br/>
+<% end %>

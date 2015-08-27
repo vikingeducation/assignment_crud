@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |key, value| %>
+  <p><%= value%></p>
+<% end %>
+<p><%= link_to "index", posts_path%>  <%= link_to "new", new_post_path%></p>
+
+<%= yield %>
+
+</body>
+</html>
