@@ -1,1 +1,8 @@
-Hello
+<h1>Robots</h1>
+<% unless @robots.empty? %>
+	<ul>
+		<%= render @robots %>
+	</ul>
+<% else %>
+	<p>No robots yet...</p>
+<% end %>

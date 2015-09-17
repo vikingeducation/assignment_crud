@@ -1,1 +1,8 @@
-new.html.erb
+<h1>New Robot</h1>
+<%= form_for(@robot, :url => robots_path) do |f| %>
+	<%= f.label(:name) %>
+	<%= f.text_field(:name) %>
+	<%= f.label(:story) %>
+	<%= f.text_area(:story) %>
+	<%= f.submit %>
+<% end %>

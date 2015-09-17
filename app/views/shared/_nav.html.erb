@@ -1,0 +1,14 @@
+<ul>
+	<%
+	[
+		['Robots Index', robots_path],
+		['New Robot', new_robot_path]
+	].each do |link|
+	title = link[0]
+	url = link[1]
+	%>
+	<li>
+		<%= link_to(title, url) %>
+	</li>
+	<% end %>
+</ul>
