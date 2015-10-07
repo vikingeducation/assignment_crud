@@ -1,0 +1,12 @@
+<h1><%= @kitten.name %></h1>
+
+<p><%= @kitten.bio %></p>
+
+<p><%= image_tag @kitten.picture %></p>
+
+<p>
+<%= link_to "Edit this Kitten", edit_kitten_path(@kitten)  %><br>
+<%= link_to "DESTROY this Kitten?!", @kitten, method: :delete  %>
+</p>
+
+<%= link_to "<< Back to Index", kittens_path  %>

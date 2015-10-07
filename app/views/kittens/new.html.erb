@@ -1,11 +1,3 @@
-<%= form_for @kitten do |f| %>
+<h1>Create a new kitten!</h1>
 
-  <%= label_tag(:name) %>
-  <%= f.text_field :name %><br>
-
-  <%= label_tag(:bio, "A short description of the kitten") %>
-  <%= f.text_area :bio %><br>
-
-  <%= f.submit %>  
-
-<% end %>
+<%= render "kitten_form" %>

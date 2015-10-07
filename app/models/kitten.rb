@@ -7,7 +7,7 @@ class Kitten < ActiveRecord::Base
   private
 
   def get_image
-    self.picture = KittenUrl::get_image
+    self.picture = KittenUrl::random_cat
   end
 
 end

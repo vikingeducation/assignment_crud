@@ -2,7 +2,7 @@ require 'httparty'
 
 module KittenUrl
   
-  def self.get_image
+  def self.random_cat
     
     xml = HTTParty.get("http://thecatapi.com/api/images/get?format=xml&size=small&results_per_page=1")
     image_url = xml["response"]["data"]["images"]["image"]["url"]
