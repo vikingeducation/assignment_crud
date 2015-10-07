@@ -1,4 +1,15 @@
 <%= form_for @kitten do |f| %>
+  <% if @kitten.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kitten.errors.count, "error") %> found:</h2>
+   
+      <ul>
+      <% @kitten.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <%= label_tag(:name) %>
   <%= f.text_field :name %><br>

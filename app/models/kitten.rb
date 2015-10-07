@@ -3,6 +3,7 @@ require 'kitten_url'
 class Kitten < ActiveRecord::Base
 
   before_create :get_image
+  validates :name, presence: true
 
   private
 
