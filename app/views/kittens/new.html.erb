@@ -1,0 +1,11 @@
+<%= form_for @kitten do |f| %>
+
+  <%= label_tag(:name) %>
+  <%= f.text_field :name %><br>
+
+  <%= label_tag(:bio, "A short description of the kitten") %>
+  <%= f.text_area :bio %><br>
+
+  <%= f.submit %>  
+
+<% end %>
