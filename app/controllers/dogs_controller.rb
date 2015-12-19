@@ -35,7 +35,14 @@ class DogsController < ApplicationController
       redirect_to @dog
     else
       flash[:error] = "Hmm, something went wrong. Try again."
-      redirect_to edit_dog_path(@dog)
+      redirect_to edit_dog_url(@dog)
+    end
+  end
+
+  def destroy
+    if @dog.delete
+      flash[:notice] = "Dog was successfully deleted."
+      redirect_to dogs_url
     end
   end
 
