@@ -27,6 +27,18 @@ class DogsController < ApplicationController
   def edit
   end
 
+  def update
+    @dog.update(dog_params)
+
+    if @dog.save
+      flash[:notice] = "Dog successfully updated!"
+      redirect_to @dog
+    else
+      flash[:error] = "Hmm, something went wrong. Try again."
+      redirect_to edit_dog_path(@dog)
+    end
+  end
+
   private
 
   def set_dog
