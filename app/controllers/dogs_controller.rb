@@ -16,7 +16,7 @@ class DogsController < ApplicationController
       redirect_to @dog
     else
       flash[:error] = "Hmm, something went wrong. Try again."
-      redirect_to :new
+      render :new
     end
   end
 
