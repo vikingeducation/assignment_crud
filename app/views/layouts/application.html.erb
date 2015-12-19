@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crud</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |type, message| %>
+  <p>
+    <%= type.capitalize %>: <%= message %>
+  </p>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
