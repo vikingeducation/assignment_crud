@@ -1,19 +1,26 @@
 <h1>My Doggz</h1>
 
+<p>
+  <%= link_to 'Add Dog', new_dog_path %>
+</p>
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Breed</th>
       <th>Age</th>
+      <th colspan="2">Actions</th>
     </tr>
   </thead>
   <tbody>
     <% @dogs.each do |dog| %>
       <tr>
-        <td><%= dog.name %></td>
+        <td><%= link_to dog.name, dog_path(dog) %></td>
         <td><%= dog.breed %></td>
         <td><%= dog.age %></td>
+        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
+        <td>Delete</td>
       </tr>
     <% end %>
   </tbody>
