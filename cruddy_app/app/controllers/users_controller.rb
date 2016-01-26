@@ -8,10 +8,10 @@ class UsersController < ApplicationController
     @user = User.new(whitelisted_user_params)
     if @user.save
       flash[:notice] = "Successfully created a new user!"
-      redirect_to user_path(@user.id)
+      redirect_to user_path(@user)
     else
-      flash[:notice] = "Oh no! Something went wrong."
-      redirect_to users_path
+      flash[:alert] = "Oh no! Something went wrong."
+      redirect_to new_user_path
     end
   end
 
@@ -22,11 +22,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update( whitelisted_user_params )
-      flash[:notice] = "Successfully created a new user!"
-      redirect_to user_path(@user.id)
+      flash[:notice] = "Successfully updated a user!"
+      redirect_to user_path(@user)
     else
-      flash[:notice] = "Oh no! Something went wrong."
-      redirect_to users_path
+      flash[:alert] = "Oh no! Something went wrong."
+      redirect_to edit_user_path(@user)
     end
   end
 
@@ -40,9 +40,13 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
-    flash[:notice] = "User destroyed!"
-    redirect_to users_path
+    if @user.destroy
+      flash[:notice] = "User destroyed!"
+      redirect_to users_path
+    else
+      flash[:alert] = "Unable to destroy user."
+      redirect_to user_path(@user)
+    end
   end
 
   private
