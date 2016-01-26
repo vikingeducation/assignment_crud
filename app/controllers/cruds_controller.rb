@@ -13,7 +13,7 @@ class CrudsController < ApplicationController
     @crud = Crud.new(crud_params)
 
     if @crud.save
-      redirect_to @crud
+      redirect_to @crud, notice: "Created successfully."
     else
       render :new
     end
@@ -35,7 +35,7 @@ class CrudsController < ApplicationController
 
   def destroy
     if @crud.destroy
-      redirect_to cruds_path
+      redirect_to cruds_path, notice: "Destroyed successfully."
     else
       render :edit
     end
