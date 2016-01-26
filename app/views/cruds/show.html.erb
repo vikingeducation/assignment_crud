@@ -1,0 +1,7 @@
+
+<%= @crud.title %> :  
+<%= @crud.body %>
+
+<%= link_to "Back to all CRUDs", cruds_path %>
+<%= link_to "Edit this CRUD", edit_crud_path(@crud) %>
+<%= link_to "Delete this CRUD", crud_path(@crud), method: :delete %>

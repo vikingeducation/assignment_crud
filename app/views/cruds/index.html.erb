@@ -1,0 +1,9 @@
+
+<%= link_to "Create new CRUD!", new_crud_path %>
+
+<% @cruds.each do |crud| %>
+
+  <%= link_to "#{crud.title} :  " , crud_path(crud) %>
+  <%= crud.body %>
+
+<% end %>
