@@ -11,8 +11,13 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(whitelisted_params)
-    @article.save
-    redirect_to article_path(@article)
+    if @article.save
+      flash[:success] = "You just created #{@article.title}"
+      redirect_to article_path(@article)
+    else
+      flash.now[:error] = "Sorry, save wasn't successful"
+      render 'new' 
+    end
   end
 
   def show
@@ -25,13 +30,19 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @article.update(whitelisted_params)
-    redirect_to article_path(@article)
+    if @article.update(whitelisted_params)
+      flash[:succes] = "You updated #{@article.title}"
+      redirect_to article_path(@article)
+    else
+      flash.now[:error] = "Sorry, update wasn't successful"
+      render 'edit'
+    end
   end
 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
+    flash[:success] = "You deleted #{@article.title}"
     redirect_to articles_path
   end
 

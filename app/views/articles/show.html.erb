@@ -4,4 +4,4 @@
 
 <%= link_to "Go to Main Page", articles_path %>
 <%= link_to "Edit Article", edit_article_path(@article) %>
-<%= link_to "Delete Article", article_path(@article), method: :delete %>
+<%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Are you sure you want to delete?"} %>
