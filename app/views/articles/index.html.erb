@@ -1,0 +1,23 @@
+<h1> All Articles </h1>
+
+
+  <% @articles.each do |article| %>
+    
+    <h2>
+      <%= link_to article.title, article_path(article.id) %>
+    </h2>
+    <div>
+      <%= link_to article.body[0..140], article_path(article.id) %>
+    </div>
+      
+    <div>
+    <%= link_to "Edit", edit_article_path(article.id) %>
+
+    <%= link_to "Delete", article_path(article.id), method: "delete" %>
+  </div>
+  <br>
+  <% end %>
+
+
+<%= link_to "Create A New Article", new_article_path %>
+
