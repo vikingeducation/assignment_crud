@@ -1,0 +1,9 @@
+<h1>Welcome to the most simplest Blog!</h1>
+
+<% @articles.each do |article| %>
+
+  <li><%= article.title %></li>
+
+<% end %>
+
+<%= link_to "Create Article", new_article_path %>
