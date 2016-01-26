@@ -1,0 +1,11 @@
+
+<h4>cruds<h4>
+<h5>check this out<h5>
+
+<%= link_to "new crud!", new_crud_path  %>
+
+
+<% @cruds.each do |crud| %>
+<p>more stuff <%= crud.name %></p>
+<% end %>
+
