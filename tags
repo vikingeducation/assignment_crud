@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	/Users/kitlangton/Viking/Unit8/assignment_crud/test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Application	/Users/kitlangton/Viking/Unit8/assignment_crud/config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Cruddy
+ApplicationController	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	/Users/kitlangton/Viking/Unit8/assignment_crud/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateCruds	/Users/kitlangton/Viking/Unit8/assignment_crud/db/migrate/20160126164723_create_cruds.rb	/^class CreateCruds < ActiveRecord::Migration$/;"	c
+Crud	/Users/kitlangton/Viking/Unit8/assignment_crud/app/models/crud.rb	/^class Crud < ActiveRecord::Base$/;"	c
+CrudTest	/Users/kitlangton/Viking/Unit8/assignment_crud/test/models/crud_test.rb	/^class CrudTest < ActiveSupport::TestCase$/;"	c
+Cruddy	/Users/kitlangton/Viking/Unit8/assignment_crud/config/application.rb	/^module Cruddy$/;"	m
+CrudsController	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^class CrudsController < ApplicationController$/;"	c
+CrudsControllerTest	/Users/kitlangton/Viking/Unit8/assignment_crud/test/controllers/cruds_controller_test.rb	/^class CrudsControllerTest < ActionController::TestCase$/;"	c
+CrudsHelper	/Users/kitlangton/Viking/Unit8/assignment_crud/app/helpers/cruds_helper.rb	/^module CrudsHelper$/;"	m
+change	/Users/kitlangton/Viking/Unit8/assignment_crud/db/migrate/20160126164723_create_cruds.rb	/^  def change$/;"	f	class:CreateCruds
+create	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def create$/;"	f	class:CrudsController
+crud_params	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def crud_params$/;"	f	class:CrudsController
+destroy	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def destroy$/;"	f	class:CrudsController
+edit	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def edit$/;"	f	class:CrudsController
+index	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def index$/;"	f	class:CrudsController
+new	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def new$/;"	f	class:CrudsController
+set_crud	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def set_crud$/;"	f	class:CrudsController
+show	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def show$/;"	f	class:CrudsController
+update	/Users/kitlangton/Viking/Unit8/assignment_crud/app/controllers/cruds_controller.rb	/^  def update$/;"	f	class:CrudsController
