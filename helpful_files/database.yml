@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: database_name_dev
+
+test:
+  <<: *default
+  database: database_name_test
+
+production:
+  <<: *default
+  database: database_name
