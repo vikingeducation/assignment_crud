@@ -1,0 +1,6 @@
+<h1>
+    Tasks
+</h1>
+<% @tasks.sort_by{|e| e[:completion_date]}.each do |task| %>
+	<%= render task %>
+<% end %>
