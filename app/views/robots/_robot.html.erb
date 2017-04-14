@@ -1,0 +1,18 @@
+<li>
+	<div>
+		<h1>
+			<%= "#{robot.id} #{robot.name}" %>
+		</h1>
+		<img src="<%= robot.image %>" alt="Robot"/>
+		<p>
+			<% excerpt_limit = 80 %>
+			<%= robot.story[0..excerpt_limit] %>
+			<%= '...' if robot.story.length > excerpt_limit %>
+			<%= link_to('[Read more]', robot_path(robot.id)) %>
+		</p>
+		<p>
+			<%= link_to('Edit', edit_robot_path(robot.id)) %>
+			<%= link_to('Delete', robot_path(robot.id), :method => :delete) %>
+		</p>
+	</div>
+</li>
